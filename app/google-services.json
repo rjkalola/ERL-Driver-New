@@ -1,0 +1,98 @@
+{
+  "project_info": {
+    "project_number": "1085258932155",
+    "firebase_url": "https://myprojects-f26af.firebaseio.com",
+    "project_id": "myprojects-f26af",
+    "storage_bucket": "myprojects-f26af.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1085258932155:android:3f6f2faeec69759550ae9e",
+        "android_client_info": {
+          "package_name": "com.app.erl"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1085258932155-d86mek2tropca22s3qesd3qc8ci0jg7b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxZOfahZES0J5xGWyxtLi_BwHPYUV5OQ0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1085258932155-d86mek2tropca22s3qesd3qc8ci0jg7b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1085258932155:android:49b01ef12ab9055c50ae9e",
+        "android_client_info": {
+          "package_name": "com.app.erldriver"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1085258932155-d86mek2tropca22s3qesd3qc8ci0jg7b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxZOfahZES0J5xGWyxtLi_BwHPYUV5OQ0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1085258932155-d86mek2tropca22s3qesd3qc8ci0jg7b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1085258932155:android:7412e4fd3fa882a250ae9e",
+        "android_client_info": {
+          "package_name": "com.app.menshairstyle"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1085258932155-d86mek2tropca22s3qesd3qc8ci0jg7b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxZOfahZES0J5xGWyxtLi_BwHPYUV5OQ0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1085258932155-d86mek2tropca22s3qesd3qc8ci0jg7b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

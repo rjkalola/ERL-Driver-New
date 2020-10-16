@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="info"
+            type="com.app.erldriver.model.entity.info.OrderItemInfo" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/_14sdp">
+
+        <TextView
+            android:id="@+id/txtTitle"
+            style="@style/VerySmallFont"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:text="@{info.name}"
+            android:textAllCaps="true"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="@dimen/_10ssp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/VerySmallFont"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="@string/lbl_item"
+                android:textAllCaps="true"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/_10ssp" />
+
+            <TextView
+                style="@style/VerySmallFont"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.3"
+                android:fontFamily="@font/montserrat_medium"
+                android:gravity="center"
+                android:text="@string/lbl_qty"
+                android:textAllCaps="true"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/_10ssp"
+                android:visibility="visible" />
+
+            <TextView
+                style="@style/VerySmallFont"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.3"
+                android:fontFamily="@font/montserrat_medium"
+                android:gravity="center"
+                android:text="@string/lbl_price"
+                android:textAllCaps="true"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/_10ssp" />
+
+        </LinearLayout>
+
+        <View
+            style="@style/Divider"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:background="@color/colorYellowDark" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvServiceList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+</layout>
+
+

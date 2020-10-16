@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="info"
+            type="com.app.erldriver.model.entity.info.ServiceItemInfo" />
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/routMainView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/routDetailsView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/_10sdp"
+            android:paddingBottom="@dimen/_10sdp">
+
+            <ImageView
+                android:id="@+id/imgService"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_dry_clean" />
+
+            <TextView
+                android:id="@+id/txtName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:layout_toStartOf="@+id/txtPrice"
+                android:layout_toEndOf="@+id/imgService"
+                android:fontFamily="@font/montserrat_semi_bold"
+                android:text="@{info.name}"
+                android:textAllCaps="true"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/_9sdp" />
+
+            <TextView
+                android:id="@+id/txtPrice"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_toStartOf="@+id/routButtonsView"
+                android:fontFamily="@font/montserrat_semi_bold"
+                android:gravity="center_vertical"
+                android:textAllCaps="true"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/_9sdp" />
+
+            <RelativeLayout
+                android:id="@+id/routButtonsView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true">
+
+                <TextView
+                    android:id="@+id/txtAdd"
+                    style="@style/VerySmallFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/img_add_item_bg"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:gravity="center"
+                    android:paddingStart="@dimen/_9sdp"
+                    android:paddingEnd="@dimen/_9sdp"
+                    android:text="@string/add_item"
+                    android:textColor="@color/colorYellowDark"
+                    android:textSize="@dimen/_8ssp"
+                    android:visibility="visible" />
+
+                <LinearLayout
+                    android:id="@+id/routAddRemoveView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:visibility="invisible">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imgRemove"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:padding="@dimen/_3sdp"
+                        app:srcCompat="@drawable/ic_remove_circle" />
+
+                    <TextView
+                        android:id="@+id/txtQuantity"
+                        style="@style/SmallFontTextView"
+                        android:layout_width="@dimen/_22sdp"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="10"
+                        android:textColor="@color/colorYellowDark"
+                        android:textSize="@dimen/_10ssp" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imgAdd"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:padding="@dimen/_3sdp"
+                        app:srcCompat="@drawable/ic_add_circle" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <View
+            style="@style/Divider"
+            android:layout_below="@+id/routDetailsView"
+            android:background="@color/colorYellowDark" />
+    </RelativeLayout>
+</layout>
+
+

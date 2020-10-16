@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <include
+            android:id="@+id/appBarLayout"
+            layout="@layout/app_bar_dashboard" />
+
+<!--        <com.google.android.material.navigation.NavigationView-->
+<!--            android:id="@+id/navView"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_gravity="start"-->
+<!--            android:fitsSystemWindows="true"-->
+<!--            android:visibility="gone">-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="vertical">-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:background="@color/colorNavigationHeaderBg">-->
+
+<!--                    <RelativeLayout-->
+<!--                        android:id="@+id/routDetailsView"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginTop="@dimen/_55sdp"-->
+<!--                        android:paddingStart="@dimen/_12sdp"-->
+<!--                        android:paddingTop="@dimen/_10sdp"-->
+<!--                        android:paddingEnd="@dimen/_16sdp"-->
+<!--                        android:paddingBottom="@dimen/_10sdp">-->
+
+<!--                        <ImageView-->
+<!--                            android:id="@+id/imgUser"-->
+<!--                            android:layout_width="@dimen/_35sdp"-->
+<!--                            android:layout_height="@dimen/_35sdp"-->
+<!--                            android:layout_centerVertical="true"-->
+<!--                            android:src="@drawable/ic_nav_my_profile" />-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/txtUserName"-->
+<!--                            style="@style/SmallFontTextView"-->
+<!--                            android:layout_centerVertical="true"-->
+<!--                            android:layout_marginStart="@dimen/_12sdp"-->
+<!--                            android:layout_toEndOf="@+id/imgUser"-->
+<!--                            android:fontFamily="@font/montserrat_medium"-->
+<!--                            android:textColor="@color/colorPrimaryText"-->
+<!--                            android:textSize="@dimen/_14ssp" />-->
+
+<!--                    </RelativeLayout>-->
+<!--                </LinearLayout>-->
+
+<!--                <androidx.recyclerview.widget.RecyclerView-->
+<!--                    android:id="@+id/rvNavigationItems"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent" />-->
+
+<!--            </LinearLayout>-->
+
+
+<!--        </com.google.android.material.navigation.NavigationView>-->
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+
+</layout>

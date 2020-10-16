@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ERL Driver Git.iml" filepath="$PROJECT_DIR$/ERL Driver Git.iml" group="ERL Driver Git" />
+      <module fileurl="file://$PROJECT_DIR$/ERL Git 2020-05-30.iml" filepath="$PROJECT_DIR$/ERL Git 2020-05-30.iml" group="ERL Git 2020-05-30" />
+      <module fileurl="file://$PROJECT_DIR$/Imagepickers/ERL Git 2020-05-30-Imagepickers.iml" filepath="$PROJECT_DIR$/Imagepickers/ERL Git 2020-05-30-Imagepickers.iml" group="ERL Git 2020-05-30/Imagepickers" />
+      <module fileurl="file://$PROJECT_DIR$/Utilities/ERL Git 2020-05-30-Utilities.iml" filepath="$PROJECT_DIR$/Utilities/ERL Git 2020-05-30-Utilities.iml" group="ERL Git 2020-05-30/Utilities" />
+      <module fileurl="file://$PROJECT_DIR$/app/ERL Git 2020-05-30-app.iml" filepath="$PROJECT_DIR$/app/ERL Git 2020-05-30-app.iml" group="ERL Git 2020-05-30/app" />
+      <module fileurl="file://$PROJECT_DIR$/Imagepickers/ERL Git-Imagepickers.iml" filepath="$PROJECT_DIR$/Imagepickers/ERL Git-Imagepickers.iml" group="ERL Git/Imagepickers" />
+      <module fileurl="file://$PROJECT_DIR$/Utilities/ERL Git-Utilities.iml" filepath="$PROJECT_DIR$/Utilities/ERL Git-Utilities.iml" group="ERL Git/Utilities" />
+      <module fileurl="file://$PROJECT_DIR$/app/ERL Git-app.iml" filepath="$PROJECT_DIR$/app/ERL Git-app.iml" group="ERL Git/app" />
+      <module fileurl="file://$PROJECT_DIR$/ERL-ERL Git.iml" filepath="$PROJECT_DIR$/ERL-ERL Git.iml" group="ERL Git" />
+      <module fileurl="file://$PROJECT_DIR$/Imagepickers/Imagepickers.iml" filepath="$PROJECT_DIR$/Imagepickers/Imagepickers.iml" group="ERL Driver Git/Imagepickers" />
+      <module fileurl="file://$PROJECT_DIR$/Utilities/Utilities.iml" filepath="$PROJECT_DIR$/Utilities/Utilities.iml" group="ERL Driver Git/Utilities" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="ERL Driver Git/app" />
+    </modules>
+  </component>
+</project>

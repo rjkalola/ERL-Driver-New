@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="info"
+            type="com.app.erldriver.model.entity.request.SaveAddressRequest" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/routMainView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:gravity="center_vertical">
+
+            <TextView
+                style="@style/SmallFontTextView"
+                android:fontFamily="@font/montserrat_semi_bold"
+                android:text="@{info.name}"
+                android:textAllCaps="true"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/_11ssp" />
+
+            <View
+                android:layout_width="0.8dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:layout_marginEnd="@dimen/_4sdp"
+                android:layout_marginBottom="@dimen/_3sdp"
+                android:background="@color/colorYellowDark" />
+
+            <TextView
+                style="@style/SmallFontTextView"
+                android:fontFamily="@font/montserrat_semi_bold"
+                android:text="@{info.phone}"
+                android:textAllCaps="true"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/_11ssp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtAddress"
+            style="@style/VerySmallFontTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="@{info.address}"
+            android:textColor="@color/colorSecondaryText"
+            android:textSize="@dimen/_11ssp" />
+
+        <TextView
+            style="@style/VerySmallFontTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="@{info.street}"
+            android:textColor="@color/colorSecondaryText"
+            android:textSize="@dimen/_11ssp" />
+
+        <TextView
+            style="@style/VerySmallFontTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="@{info.landmark}"
+            android:textColor="@color/colorSecondaryText"
+            android:textSize="@dimen/_11ssp" />
+
+        <View
+            style="@style/Divider"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:background="@color/colorYellowDark" />
+
+    </LinearLayout>
+</layout>
+
+

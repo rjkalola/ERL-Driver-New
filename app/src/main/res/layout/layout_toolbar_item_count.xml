@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="?android:attr/actionButtonStyle"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/icon_badge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/txtItemCount"
+        android:layout_width="@dimen/_11sdp"
+        android:layout_height="@dimen/_11sdp"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="12dp"
+        android:fontFamily="@font/montserrat_semi_bold"
+        android:gravity="center"
+        android:textColor="@color/colorPrimaryText"
+        android:textSize="@dimen/_6ssp" />
+</RelativeLayout>
+
+

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#dc9e51</color>
+    <color name="colorPrimaryDark">#dc9e51</color>
+    <color name="colorAccent">#000000</color>
+    <color name="colorWindowBackground">#ffffff</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorDivider">#ebe9e6</color>
+    <color name="colorPrimaryText">#0b0b0b</color>
+    <color name="colorSecondaryText">#5a5a5a</color>
+    <color name="colorSecondaryLightText">#9F9F9F</color>
+    <color name="colorYellowDark">#dc9e51</color>
+    <color name="colorNavigationHeaderBg">#ebe9e6</color>
+    <color name="colorErrorColor">#e50914</color>
+    <color name="colorViewBg">#ebe9e6</color>
+    <color name="colorHint">#9d9d9d</color>
+
+    <color name="colorActiveHourModule">#dc9e51</color>
+    <color name="colorInActiveHourModule">#faf5ef</color>
+
+</resources>

@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="manageAddressViewModel"
+            type="com.app.erldriver.viewModel.ManageAddressViewModel" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/routMainView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/_10sdp"
+        android:paddingTop="@dimen/_10sdp"
+        android:paddingEnd="@dimen/_10sdp"
+        android:paddingBottom="@dimen/_12sdp">
+
+        <RelativeLayout
+            android:id="@+id/routChangeAddressView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txtShortAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@+id/txtChangeAddress"
+                android:fontFamily="@font/montserrat_medium"
+                android:text=""
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/_11ssp" />
+
+            <TextView
+                android:id="@+id/txtChangeAddress"
+                style="@style/VerySmallFontTextView"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/img_yellow_button_stroke_bg"
+                android:paddingStart="@dimen/_6sdp"
+                android:paddingTop="@dimen/_3sdp"
+                android:paddingEnd="@dimen/_6sdp"
+                android:paddingBottom="@dimen/_3sdp"
+                android:text="@string/change_address"
+                android:textColor="@color/colorYellowDark"
+                android:textSize="@dimen/_9ssp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/txtFullAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="@={manageAddressViewModel.saveAddressRequest.address}"
+            android:textColor="@color/colorSecondaryText"
+            android:textSize="@dimen/_9ssp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_10sdp">
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/edtName"
+                style="@style/VerySmallFontTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:layout_weight="1"
+                android:hint="@string/hint_name"
+                android:imeOptions="actionNext"
+                android:inputType="textCapWords"
+                android:text="@={manageAddressViewModel.saveAddressRequest.name}"
+                app:met_errorColor="@color/colorErrorColor"
+                app:met_floatingLabel="normal"
+                app:met_singleLineEllipsis="false"
+                app:met_textColor="@color/colorPrimaryText" />
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/edtMobileNumber"
+                style="@style/VerySmallFontTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_weight="1"
+                android:hint="@string/hint_phone"
+                android:imeOptions="actionNext"
+                android:inputType="phone"
+                android:text="@={manageAddressViewModel.saveAddressRequest.phone}"
+                app:met_errorColor="@color/colorErrorColor"
+                app:met_floatingLabel="normal"
+                app:met_singleLineEllipsis="false"
+                app:met_textColor="@color/colorPrimaryText" />
+
+        </LinearLayout>
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/edtHouseNumber"
+            style="@style/VerySmallFontTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:hint="@string/hint_house_number"
+            android:text="@={manageAddressViewModel.saveAddressRequest.address}"
+            app:met_errorColor="@color/colorErrorColor"
+            app:met_floatingLabel="normal"
+            app:met_singleLineEllipsis="false"
+            app:met_textColor="@color/colorPrimaryText" />
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/edtStreet"
+            style="@style/VerySmallFontTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:hint="@string/hint_street"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            android:text="@={manageAddressViewModel.saveAddressRequest.street}"
+            app:met_errorColor="@color/colorErrorColor"
+            app:met_floatingLabel="normal"
+            app:met_singleLineEllipsis="false"
+            app:met_textColor="@color/colorPrimaryText" />
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/edtLandmark"
+            style="@style/VerySmallFontTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:hint="@string/hint_landmark"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:text="@={manageAddressViewModel.saveAddressRequest.landmark}"
+            app:met_errorColor="@color/colorErrorColor"
+            app:met_floatingLabel="normal"
+            app:met_singleLineEllipsis="false"
+            app:met_textColor="@color/colorPrimaryText" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/edtCity"
+                style="@style/VerySmallFontTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:layout_weight="1"
+                android:drawableEnd="@drawable/ic_arrow_drop_down"
+                android:focusable="false"
+                android:hint="@string/hint_city"
+                android:imeOptions="actionNext"
+                android:text="@={manageAddressViewModel.saveAddressRequest.city_name}"
+                android:inputType="text"
+                app:met_errorColor="@color/colorErrorColor"
+                app:met_floatingLabel="normal"
+                app:met_singleLineEllipsis="false"
+                app:met_textColor="@color/colorPrimaryText" />
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/edtArea"
+                style="@style/VerySmallFontTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_weight="1"
+                android:drawableEnd="@drawable/ic_arrow_drop_down"
+                android:focusable="false"
+                android:hint="@string/hint_area"
+                android:text="@={manageAddressViewModel.saveAddressRequest.area_name}"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                app:met_errorColor="@color/colorErrorColor"
+                app:met_floatingLabel="normal"
+                app:met_singleLineEllipsis="false"
+                app:met_textColor="@color/colorPrimaryText" />
+
+        </LinearLayout>
+    </LinearLayout>
+</layout>
+
+

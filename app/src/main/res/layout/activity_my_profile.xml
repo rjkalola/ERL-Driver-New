@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="info"
+            type="com.app.erldriver.model.entity.response.ProfileResponse" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".DashboardActivity">
+
+        <LinearLayout
+            android:id="@+id/routHeaderView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/img_dashboard_header_bg"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_18sdp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/montserrat_semi_bold"
+                    android:gravity="center"
+                    android:text="@string/my_profile"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorPrimaryText"
+                    android:textSize="@dimen/_16ssp" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imgBack"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:padding="@dimen/_4sdp"
+                    app:srcCompat="@drawable/ic_arrow_back" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/routSelectImageView"
+                android:layout_width="@dimen/_95sdp"
+                android:layout_height="@dimen/_95sdp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_18sdp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/img_white_circle"
+                    android:padding="@dimen/_1sdp"
+                    app:srcCompat="@drawable/ic_user_place_holder" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imgUserImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/_1sdp" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:padding="@dimen/_2sdp"
+                    app:srcCompat="@drawable/ic_camera" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/btnSave"
+            android:layout_below="@+id/routHeaderView">
+
+            <LinearLayout
+                android:id="@+id/routDetailsView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingStart="@dimen/_20sdp"
+                android:paddingTop="@dimen/_20sdp"
+                android:paddingEnd="@dimen/_20sdp"
+                android:paddingBottom="@dimen/_10sdp"
+                android:visibility="visible">
+
+                <TextView
+                    style="@style/SmallFontTextView"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="@string/lbl_full_name"
+                    android:textColor="@color/colorPrimaryText"
+                    android:textSize="@dimen/_11ssp" />
+
+                <EditText
+                    android:id="@+id/edtFullName"
+                    style="@style/SmallFontTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:background="@color/transparent"
+                    android:fontFamily="@font/montserrat_semi_bold"
+                    android:hint="@string/dash_sign"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapWords"
+                    android:text="@={info.name}"
+                    android:textColor="@color/colorYellowDark"
+                    android:textSize="@dimen/_13ssp" />
+
+                <View
+                    style="@style/Divider"
+                    android:layout_marginTop="@dimen/_14sdp"
+                    android:layout_marginBottom="@dimen/_14sdp"
+                    android:background="@color/colorYellowDark" />
+
+                <TextView
+                    style="@style/SmallFontTextView"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="@string/lbl_mobile_number"
+                    android:textColor="@color/colorPrimaryText"
+                    android:textSize="@dimen/_11ssp" />
+
+                <EditText
+                    android:id="@+id/edtMobileNUmber"
+                    style="@style/SmallFontTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:background="@color/transparent"
+                    android:fontFamily="@font/montserrat_semi_bold"
+                    android:hint="@string/dash_sign"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:text="@={info.phone}"
+                    android:textColor="@color/colorYellowDark"
+                    android:textSize="@dimen/_13ssp" />
+
+                <View
+                    style="@style/Divider"
+                    android:layout_marginTop="@dimen/_14sdp"
+                    android:layout_marginBottom="@dimen/_14sdp"
+                    android:background="@color/colorYellowDark" />
+
+                <TextView
+                    style="@style/SmallFontTextView"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="@string/lbl_email"
+                    android:textColor="@color/colorPrimaryText"
+                    android:textSize="@dimen/_11ssp" />
+
+                <EditText
+                    android:id="@+id/edtEmail"
+                    style="@style/SmallFontTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:background="@color/transparent"
+                    android:fontFamily="@font/montserrat_semi_bold"
+                    android:hint="@string/dash_sign"
+                    android:imeOptions="actionDone"
+                    android:inputType="textEmailAddress"
+                    android:text="@={info.email}"
+                    android:textColor="@color/colorPrimaryText"
+                    android:textSize="@dimen/_13ssp" />
+
+                <View
+                    style="@style/Divider"
+                    android:layout_marginTop="@dimen/_14sdp"
+                    android:layout_marginBottom="@dimen/_14sdp"
+                    android:background="@color/colorYellowDark" />
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <com.balysv.materialripple.MaterialRippleLayout
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/colorPrimaryText"
+            app:mrl_rippleColor="#2C7A7A7A"
+            app:mrl_rippleDelayClick="false"
+            app:mrl_rippleDuration="100"
+            app:mrl_rippleOverlay="true">
+
+            <TextView
+                android:id="@+id/txtSave"
+                style="@style/SmallFont"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:fontFamily="@font/montserrat_medium"
+                android:gravity="center"
+                android:text="@string/save"
+                android:textAllCaps="true"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/_14ssp" />
+        </com.balysv.materialripple.MaterialRippleLayout>
+    </RelativeLayout>
+
+</layout>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="info"
+            type="com.app.erldriver.model.entity.info.ModuleInfo" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="false">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv"
+            android:layout_width="wrap_content"
+            app:cardBackgroundColor="@color/transparent"
+            android:layout_height="wrap_content"
+            android:clickable="false">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:paddingStart="@dimen/_14sdp"
+                android:paddingTop="@dimen/_14sdp"
+                android:paddingEnd="@dimen/_16sdp"
+                android:paddingBottom="@dimen/_6sdp">
+
+                <RelativeLayout
+                    android:id="@+id/routMainView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/marker_window_bg"
+                    android:paddingStart="@dimen/_9sdp"
+                    android:paddingTop="@dimen/_8sdp"
+                    android:paddingEnd="@dimen/_9sdp"
+                    android:paddingBottom="@dimen/_8sdp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imgUserPic"
+                        android:layout_width="@dimen/_50sdp"
+                        android:visibility="gone"
+                        android:layout_height="@dimen/_50sdp"
+                        android:layout_centerVertical="true" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@+id/imgUserPic"
+                        android:layout_centerVertical="true">
+
+                        <TextView
+                            android:id="@+id/txtName"
+                            style="@style/MediumFontTextView"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:text="@{info.name}"
+                            android:textAllCaps="true"
+                            android:fontFamily="@font/montserrat_semi_bold"
+                            android:textColor="@color/colorPrimaryText"
+                            android:textSize="@dimen/_11ssp"/>
+
+                        <TextView
+                            android:id="@+id/txtAddress"
+                            style="@style/SmallFontTextView"
+                            android:text="@{info.address}"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:textColor="@color/colorHint"
+                            android:textSize="@dimen/_10ssp"/>
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/_16sdp"
+                    android:layout_height="@dimen/_11sdp"
+                    android:layout_below="@+id/routMainView"
+                    android:layout_centerHorizontal="true"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/ic_triangle" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/cv"
+            android:layout_alignTop="@+id/cv"
+            android:layout_alignEnd="@+id/cv"
+            android:layout_alignBottom="@+id/cv"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_shadow"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+
+</layout>

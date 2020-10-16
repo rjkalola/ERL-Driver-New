@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+
+    </data>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/btnVerify"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:fontFamily="@font/montserrat_semi_bold"
+                android:gravity="center"
+                android:text="@string/lbl_verification"
+                android:textAllCaps="true"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/_17ssp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_50sdp"
+                android:fontFamily="@font/montserrat_semi_bold"
+                android:gravity="center"
+                android:text="@string/lbl_verification_code"
+                android:textAllCaps="true"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/_11ssp" />
+
+            <TextView
+                android:id="@+id/txtVerificationCodeHint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_30sdp"
+                android:layout_marginEnd="@dimen/_30sdp"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="center"
+                android:text="@string/lbl_display_verification_code_hint"
+                android:textColor="@color/colorSecondaryText"
+                android:textSize="@dimen/_9ssp" />
+
+            <LinearLayout
+                android:id="@+id/routOtpView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/edtVerifyCode1"
+                    style="@style/LargeFont"
+                    android:layout_width="@dimen/_38sdp"
+                    android:layout_height="@dimen/_38sdp"
+                    android:layout_marginEnd="@dimen/_6sdp"
+                    android:background="@drawable/img_otp_code_bg"
+                    android:digits="0123456789"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:gravity="center"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:nextFocusForward="@+id/edtVerifyCode2"
+                    android:textColor="@color/colorPrimaryText"
+                    android:textSize="@dimen/_17sdp" />
+
+                <EditText
+                    android:id="@+id/edtVerifyCode2"
+                    style="@style/LargeFont"
+                    android:layout_width="@dimen/_38sdp"
+                    android:layout_height="@dimen/_38sdp"
+                    android:layout_marginStart="@dimen/_6sdp"
+                    android:layout_marginEnd="@dimen/_6sdp"
+                    android:background="@drawable/img_otp_code_bg"
+                    android:digits="0123456789"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:gravity="center"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:nextFocusForward="@+id/edtVerifyCode3"
+                    android:textColor="@color/colorPrimaryText"
+                    android:textSize="@dimen/_17sdp" />
+
+                <EditText
+                    android:id="@+id/edtVerifyCode3"
+                    style="@style/LargeFont"
+                    android:layout_width="@dimen/_38sdp"
+                    android:layout_height="@dimen/_38sdp"
+                    android:layout_marginStart="@dimen/_6sdp"
+                    android:layout_marginEnd="@dimen/_6sdp"
+                    android:background="@drawable/img_otp_code_bg"
+                    android:digits="0123456789"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:gravity="center"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:nextFocusForward="@+id/edtVerifyCode4"
+                    android:textColor="@color/colorPrimaryText"
+                    android:textSize="@dimen/_17sdp" />
+
+                <EditText
+                    android:id="@+id/edtVerifyCode4"
+                    style="@style/LargeFont"
+                    android:layout_width="@dimen/_38sdp"
+                    android:layout_height="@dimen/_38sdp"
+                    android:layout_marginStart="@dimen/_6sdp"
+                    android:background="@drawable/img_otp_code_bg"
+                    android:digits="0123456789"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:gravity="center"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:textColor="@color/colorPrimaryText"
+                    android:textSize="@dimen/_17sdp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_28sdp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    style="@style/VerySmallFontTextView"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:text="@string/lbl_dont_receive_the_code"
+                    android:textColor="@color/colorSecondaryText"
+                    android:textSize="@dimen/_10ssp" />
+
+                <TextView
+                    android:id="@+id/txtResend"
+                    style="@style/SmallFontTextView"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:padding="@dimen/_3sdp"
+                    android:text="@string/lbl_resend"
+                    android:textColor="@color/colorPrimaryText"
+                    android:textSize="@dimen/_11ssp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.balysv.materialripple.MaterialRippleLayout
+            android:id="@+id/btnVerify"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/colorPrimaryText"
+            app:mrl_rippleColor="#2C7A7A7A"
+            app:mrl_rippleDelayClick="false"
+            app:mrl_rippleDuration="100"
+            app:mrl_rippleOverlay="true">
+
+            <TextView
+                android:id="@+id/txtVerify"
+                style="@style/SmallFont"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:fontFamily="@font/montserrat_medium"
+                android:gravity="center"
+                android:text="@string/lbl_verify"
+                android:textAllCaps="true"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/_14ssp" />
+        </com.balysv.materialripple.MaterialRippleLayout>
+
+    </RelativeLayout>
+</layout>

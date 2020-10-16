@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="info"
+            type="com.app.erldriver.model.entity.info.ItemInfo" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/routMainView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/_6sdp">
+
+            <TextView
+                android:id="@+id/txtTitle"
+                style="@style/VerySmallFont"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="7"
+                android:fontFamily="@font/montserrat_medium"
+                android:textAllCaps="true"
+                android:textColor="@color/colorYellowDark"
+                android:textSize="@dimen/_11ssp" />
+
+            <TextView
+                style="@style/VerySmallFont"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:fontFamily="@font/montserrat_medium"
+                android:gravity="center"
+                android:text="@string/lbl_qty"
+                android:textAllCaps="true"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/_11ssp"
+                android:visibility="invisible" />
+
+            <TextView
+                style="@style/VerySmallFont"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.5"
+                android:fontFamily="@font/montserrat_medium"
+                android:visibility="gone"
+                android:gravity="center"
+                android:text="@string/lbl_qty"
+                android:textAllCaps="true"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/_11ssp" />
+
+        </LinearLayout>
+
+        <View
+            style="@style/Divider"
+            android:background="@color/colorYellowDark" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvSelectedItems"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginBottom="@dimen/_6sdp"
+            android:nestedScrollingEnabled="false" />
+
+    </LinearLayout>
+</layout>
+
+

@@ -1,0 +1,254 @@
+<resources>
+
+    <string-array name="imageExtension" translatable="false">
+        <item>jpg</item>
+        <item>png</item>
+        <item>jpeg</item>
+    </string-array>
+
+    <string name="app_name" translatable="false">ERL Driver</string>
+    <string name="CHANNEL_ID" translatable="false">ERL</string>
+    <!--    <string name="font_family_regular" translatable="false">sans-serif</string>-->
+    <!--    <string name="font_family_medium" translatable="false">sans-serif-medium</string>-->
+
+    <string name="font_family_regular" translatable="false">fonts/Montserrat-Regular.otf</string>
+    <string name="google_key_api" translatable="false">AIzaSyBcxNZeUe5zUqDVXAvk3fOATaXROrpbUhE</string>
+
+    <string name="error_access_denied">Access Denied</string>
+    <string name="error_bad_request_400">The request could not be understood by the server due to malformed syntax.</string>
+    <string name="error_unauthorized_401">The request requires user authentication. The response MUST include a WWW-Authenticate header field.</string>
+    <string name="error_forbidden_403">The server understood the request but is refusing to fulfill it.</string>
+    <string name="error_not_found_404">The server has not found anything matching the Request-URI.</string>
+    <string name="error_method_not_allowed_405">The method specified in the Request-Line is not allowed for the resource identified by the Request-URI.</string>
+    <string name="error_request_timeout_408">Your request timed out. Please retry the request.</string>
+    <string name="error_request_entity_too_large_413">The server is refusing to process a request because the request entity is larger than the server is willing or able to process.</string>
+    <string name="error_request_uri_too_long_414">The server is refusing to service the request because the Request-URI is longer than the server is willing to interpret.</string>
+    <string name="error_internal_server_error_500">The server encountered an unexpected condition which prevented it from fulfilling the request.</string>
+    <string name="error_unknown">An unknown error occurred</string>
+    <string name="msg_unauthorized">We are signing you out as we found your account access from another device</string>
+    <string name="error_network">There is a problem connecting to the Server, please check your network connection, and then try again.</string>
+    <string name="error_internet_connection">Please check your internet connection</string>
+
+    //Error Strings
+    <string name="ERR100">Parameters Missing</string>
+    <string name="ERR101">Requested data is empty.</string>
+    <string name="ERR102">First parameters must be an array</string>
+    <string name="ERR103">You have entered an invalid email address.</string>
+    <string name="ERR104">You have entered an invalid password.</string>
+    <string name="ERR105">You have entered invalid access code</string>
+
+    <string name="dash_sign">-</string>
+    <string name="login">Login</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="hint_name">Name</string>
+    <string name="hint_password">Password</string>
+    <string name="hint_forgot_password">Forgot Password?</string>
+    <string name="lbl_dont_have_an_account">Don\'t have an Account?</string>
+    <string name="lbl_register_here">Register here</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_phone">Phone</string>
+    <string name="hint_confirm_password">Confirm Password</string>
+    <string name="lbl_already_have_an_account">Already have an account?</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="change_password">Change Password</string>
+    <string name="info_reset_password">We just need your registered Email Id\nto send your password reset instructions.</string>
+    <string name="lbl_verification">Verification</string>
+    <string name="lbl_verification_code">Verification Code</string>
+    <string name="lbl_display_verification_code_hint">Please type the verification code sent to your email %s</string>
+    <string name="lbl_dont_receive_the_code">Don\'t receive the code?</string>
+    <string name="lbl_resend">Resend</string>
+    <string name="lbl_verify">Verify</string>
+    <string name="lbl_dashboard">Dashboard</string>
+    <string name="error_verify_code">Verification code is not valid</string>
+    <string name="create_new_password">Create New Password</string>
+    <string name="my_profile">My Profile</string>
+    <string name="my_order">My Order</string>
+    <string name="my_orders">My Orders</string>
+    <string name="order_history">Order History</string>
+    <string name="settings">Settings</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="terms_and_conditions">Terms &amp; Conditions</string>
+    <string name="about_app">About App</string>
+    <string name="share">Share</string>
+    <string name="logout">Logout</string>
+    <string name="logout_msg">Are you sure you want to logout?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="ok">Ok</string>
+    <string name="hint_new_password">New Password</string>
+    <string name="hint_confirm_new_password">Confirm New Password</string>
+    <string name="lbl_select_item">Select Item</string>
+    <string name="lbl_display_tab_name_and_count">%s (%d)</string>
+    <string name="lbl_display_price">AED %s</string>
+    <string name="add">Add</string>
+    <string name="add_item">Add Item</string>
+    <string name="lbl_continue">Continue</string>
+    <string name="lbl_pick_time_slot">Pick a time slot</string>
+    <string name="lbl_select_date">Select Date:</string>
+    <string name="lbl_select_time">Select Time:</string>
+    <string name="lbl_address">Address:</string>
+    <string name="lbl_change_add_Address">change address / add address</string>
+    <string name="lbl_order_details">Order Details:</string>
+    <string name="lbl_item">Item:</string>
+    <string name="lbl_qty">Qty</string>
+    <string name="lbl_update">Update:</string>
+    <string name="lbl_display_selected_item_title">%s:</string>
+    <string name="next">Next</string>
+    <string name="lbl_from_time">From Time</string>
+    <string name="lbl_to_time">To Time</string>
+    <string name="lbl_select">Select</string>
+    <string name="lbl_cancel">Cancel</string>
+    <string name="lbl_hour">Hour</string>
+    <string name="lbl_minute">Minute</string>
+    <string name="lbl_display_time">%s to %s</string>
+    <string name="msg_location_permission">This application needs access to your location.</string>
+    <string name="msg_storage_permission">This application needs access to your storage</string>
+    <string name="msg_gps_enable">GPS is disabled in your device. Would you like to enable it?\n\nYou must select \"High Accuracy\" from location mode.</string>
+    <string name="lbl_choose_address">Choose an address</string>
+    <string name="lbl_use_this_Address">Use this address</string>
+    <string name="hint_house_number">Flat/House Name &amp; Number</string>
+    <string name="hint_street">Street</string>
+    <string name="hint_landmark">Landmark</string>
+    <string name="hint_city">City</string>
+    <string name="hint_area">Area</string>
+    <string name="change_address">Change Address</string>
+    <string name="search">search</string>
+    <string name="msg_select_city_first">Please select city first</string>
+    <string name="msg_select_address_first">Please select address first</string>
+    <string name="lbl_select_address">Select Address</string>
+    <string name="choose_new_address">Choose New Address</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    <string name="msg_delete_address">Are you sure you want to delete this address?</string>
+    <string name="lbl_order_number">Order No:</string>
+    <string name="lbl_date">Date:</string>
+    <string name="lbl_status">Status:</string>
+    <string name="lbl_order_status">Order Status:</string>
+    <string name="lbl_price">Price:</string>
+    <string name="lbl_order_amount">Order Amount:</string>
+    <string name="lbl_order_type">Order Type:</string>
+    <string name="lbl_number_of_paces">Number of Paces:</string>
+    <string name="lbl_view_more">View More</string>
+    <string name="lbl_delivery_time">Delivery Time:</string>
+    <string name="lbl_delivery_note">Delivery Note:</string>
+    <string name="lbl_total_paces">Total Paces:</string>
+    <string name="lbl_total_price">Total Price:</string>
+    <string name="msg_currently_no_service_available">Currently there are no service available in your area. Please change address</string>
+    <string name="msg_cancel_order">Are you sure you want to cancel this order?</string>
+    <string name="save">Save</string>
+    <string name="lbl_full_name">Full Name:</string>
+    <string name="lbl_mobile_number">Mobile Number:</string>
+    <string name="lbl_email">Email:</string>
+    <string name="lbl_select_image_from">Select Image From:</string>
+    <string name="lbl_camera">Camera</string>
+    <string name="lbl_gallery">Gallery</string>
+    <string name="done">Done</string>
+    <string name="albums">Albums</string>
+    <string name="error_image_format">Invalid file format. Please choose the JPG,PNG and JPEG format</string>
+    <string name="lbl_crop_image">Crop Image</string>
+    <string name="msg_clear_cart">Are you sure want to change service type? Once you changed service type your cart will be clear.</string>
+    <string name="lbl_thank_you">Thank You</string>
+    <string name="lbl_done">Done</string>
+    <string name="msg_your_order_has_been_successfully_placed">Your order has been successfully placed.</string>
+    <string name="hint_say_something">Say Something&#8230;</string>
+    <string name="lbl_order_summery">Order Summary</string>
+    <string name="lbl_pay_invoice">Pay Invoice</string>
+    <string name="lbl_pay">Pay</string>
+    <string name="lbl_available_wallet">Available Wallet:</string>
+    <string name="lbl_total_payable_amount">Total payable amount is:</string>
+    <string name="lbl_total">Total</string>
+    <string name="lbl_select_shop">Select Shop</string>
+    <string name="lbl_no_pickup_order_found">No pickup order found</string>
+    <string name="lbl_no_deliver_order_found">No deliver order found</string>
+
+
+    <!--    <string name=""></string>-->
+
+    <!--Validation message-->
+    <string name="error_empty_name">Please enter name</string>
+    <string name="error_empty_email">Please enter email</string>
+    <string name="error_invalid_email">Please enter valid email</string>
+    <string name="error_empty_phone">Please enter phone number</string>
+    <string name="error_empty_password">Please enter password</string>
+    <string name="error_empty_confirm_password">Please enter confirm password</string>
+    <string name="error_not_match_password">Password does not match</string>
+    <string name="error_select_at_least_one_item">Please Select at least 1 item</string>
+    <string name="error_empty_flat_house_number">Please enter Flat/House name and number</string>
+    <string name="error_empty_street">Please enter street</string>
+    <string name="error_empty_landmark">Please enter landmark</string>
+    <string name="error_empty_area">Please select area</string>
+    <string name="placeholder_empty_address">No Address Found</string>
+    <string name="placeholder_empty_order">No Order Found</string>
+    <string name="error_empty_order_date">Please select date</string>
+    <string name="error_empty_order_time">Please select time</string>
+    <string name="error_empty_address">Please select address</string>
+    <string name="loading_more">Loading more&#8230;</string>
+    <string name="lbl_home">Home</string>
+    <string name="lbl_price_list">Price List</string>
+    <string name="lbl_wallet">Wallet</string>
+    <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
+    <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
+    <string name="lbl_place_order">Place Order</string>
+    <string name="lbl_store_locator">Store Locator</string>
+    <string name="lbl_live_support">Live Support</string>
+    <string name="lbl_contact_us">Contact us</string>
+    <string name="lbl_select_service">Select Service</string>
+    <string name="lbl_48_hours">48\nHours</string>
+    <string name="lbl_24_hours">24\nHours</string>
+    <string name="lbl_5_hours">5\nHours</string>
+    <string name="lbl_skip_item_lazy_order">Skip Item Lazy Order</string>
+    <string name="lbl_services">Services</string>
+    <!--    <string name=""></string>-->
+
+
+    //Driver New
+    <string name="lbl_pick_ups">PickUps</string>
+    <string name="lbl_drops">Drops</string>
+    <string name="lbl_display_pick_ups">PickUps (%d)</string>
+    <string name="lbl_display_drops">Drops (%d)</string>
+    <string name="lbl_availability">Availability:</string>
+    <string name="lbl_pick_up_order">PickUp Order</string>
+    <string name="lbl_drop_order">Drop Order</string>
+    <string name="lbl_pick_up_details">PickUp Details</string>
+    <string name="lbl_drop_details">Drop Details</string>
+    <string name="lbl_pick_up_order_number">PickUp-Order No:</string>
+    <string name="lbl_drop_order_number">Drop-Order No:</string>
+    <string name="lbl_name">Name:</string>
+    <string name="lbl_mobile_no">Mobile No:</string>
+    <string name="lbl_confirm_pickup">Confirm PickUp</string>
+    <string name="lbl_drop">Drop</string>
+    <string name="lbl_pick_up_note">PickUp Note:</string>
+    <string name="hint_enter_pick_up_note">Enter Pickup notes:</string>
+    <string name="lbl_drop_note">Drop Note:</string>
+    <string name="hint_enter_drop_note">Enter Drop notes:</string>
+    <string name="lbl_submit">Submit</string>
+    <string name="lbl_track">Track</string>
+
+    <!--        <string name=""></string>-->
+
+    <integer-array name="navigationItemsDrawable">
+        <item>@drawable/ic_nav_my_profile</item>
+        <item>@drawable/ic_nav_my_order</item>
+        <item>@drawable/ic_nav_our_services</item>
+        <item>@drawable/ic_nav_settings</item>
+        <item>@drawable/ic_nav_privacy_policy</item>
+        <item>@drawable/ic_nav_terms_and_conditions</item>
+        <item>@drawable/ic_nav_about_app</item>
+        <item>@drawable/ic_nav_share</item>
+        <item>@drawable/ic_nav_logout</item>
+    </integer-array>
+
+    <string-array name="navigationItems">
+        <item>@string/my_profile</item>
+        <item>@string/my_order</item>
+        <item>@string/lbl_services</item>
+        <item>@string/settings</item>
+        <item>@string/privacy_policy</item>
+        <item>@string/terms_and_conditions</item>
+        <item>@string/about_app</item>
+        <item>@string/share</item>
+        <item>@string/logout</item>
+    </string-array>
+
+</resources>
