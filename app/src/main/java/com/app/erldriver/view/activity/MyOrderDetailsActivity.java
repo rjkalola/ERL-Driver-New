@@ -161,6 +161,11 @@ public class MyOrderDetailsActivity extends BaseActivity implements View.OnClick
                         binding.routTrack.setVisibility(View.GONE);
                     }
 
+                    if (response.isIs_payment_received())
+                        binding.txtPaymentReceivedStatus.setText(mContext.getString(R.string.yes));
+                    else
+                        binding.txtPaymentReceivedStatus.setText(mContext.getString(R.string.no));
+
                     String address = getOrderDetails().getAddress() + " ," + getOrderDetails().getStreet() + " ," + getOrderDetails().getLandmark() + " ," + getOrderDetails().getArea_name() + " ," + getOrderDetails().getCity_name();
                     binding.txtAddress.setText(address);
 

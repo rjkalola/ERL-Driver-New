@@ -57,7 +57,15 @@ public class DashBoardActivity extends BaseActivity implements View.OnClickListe
         binding.appBarLayout.txtPickUps.setOnClickListener(this);
         binding.appBarLayout.txtDrops.setOnClickListener(this);
 
-        dashBoardViewModel.getDashboardRequest();
+        binding.appBarLayout.swipeRefreshLayout.setOnRefreshListener(() -> {
+            loadData(false);
+        });
+
+        loadData(true);
+    }
+
+    public void loadData(boolean isProgress) {
+        dashBoardViewModel.getDashboardRequest(isProgress);
     }
 
     @Override
@@ -111,6 +119,7 @@ public class DashBoardActivity extends BaseActivity implements View.OnClickListe
 
     public Observer dashBoardResponse() {
         return (Observer<DashBoardResponse>) response -> {
+            binding.appBarLayout.swipeRefreshLayout.setRefreshing(false);
             try {
                 if (response == null) {
                     AlertDialogHelper.showDialog(mContext, null,

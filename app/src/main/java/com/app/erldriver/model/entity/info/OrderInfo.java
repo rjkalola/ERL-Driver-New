@@ -7,6 +7,7 @@ import org.parceler.Parcel;
 public class OrderInfo {
     int id;
     String order_no,name ,phone , address, street, landmark, area_name,city_name,latitude,longitude,pickup_date,pickup_time,status,order_type;
+    boolean is_payment_received;
 
     public int getId() {
         return id;
@@ -126,6 +127,14 @@ public class OrderInfo {
 
     public void setOrder_type(String order_type) {
         this.order_type = order_type;
+    }
+
+    public boolean isIs_payment_received() {
+        return is_payment_received;
+    }
+
+    public void setIs_payment_received(boolean is_payment_received) {
+        this.is_payment_received = is_payment_received;
     }
 }
 

@@ -181,7 +181,25 @@
                 </LinearLayout>
 
             </LinearLayout>
+
         </LinearLayout>
+
+        <TextView
+            style="@style/SmallFontTextView"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:text="@string/payment_received"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="@dimen/_10ssp" />
+
+        <TextView
+            android:id="@+id/txtPaymentReceivedStatus"
+            style="@style/SmallFontTextView"
+            android:paddingEnd="@dimen/_8sdp"
+            android:paddingStart="0dp"
+            android:fontFamily="@font/montserrat_regular"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="@dimen/_10ssp" />
 
         <View
             style="@style/Divider"

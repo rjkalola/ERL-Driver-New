@@ -41,8 +41,13 @@ public class MyOrderListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
         final ItemViewHolder itemViewHolder = (ItemViewHolder) holder;
         OrderInfo info = list.get(position);
         itemViewHolder.getData(info);
-        String address = info.getAddress() + " ," + info.getStreet() + " ," + info.getLandmark()+ " ," + info.getArea_name()+ " ," + info.getCity_name();
+        String address = info.getAddress() + " ," + info.getStreet() + " ," + info.getLandmark() + " ," + info.getArea_name() + " ," + info.getCity_name();
         itemViewHolder.binding.txtAddress.setText(address);
+
+        if (info.isIs_payment_received())
+            itemViewHolder.binding.txtPaymentReceivedStatus.setText(mContext.getString(R.string.yes));
+        else
+            itemViewHolder.binding.txtPaymentReceivedStatus.setText(mContext.getString(R.string.no));
 
         itemViewHolder.binding.routMainView.setOnClickListener(v -> {
             if (listener != null) {

@@ -42,44 +42,51 @@
 
         </LinearLayout>
 
-        <LinearLayout
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefreshLayout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:orientation="vertical">
+            android:layout_height="match_parent">
 
-            <TextView
-                android:id="@+id/txtPickUps"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_50sdp"
-                android:layout_marginEnd="@dimen/_50sdp"
-                android:background="@drawable/img_dashboard_button_bg"
-                android:fontFamily="@font/montserrat_semi_bold"
+                android:layout_height="match_parent"
                 android:gravity="center"
-                android:padding="@dimen/_11ssp"
-                android:layout_marginBottom="@dimen/_16sdp"
-                android:text="@string/lbl_pick_ups"
-                android:textAllCaps="true"
-                android:textColor="@color/colorPrimaryText"
-                android:textSize="@dimen/_14ssp" />
+                android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/txtDrops"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_50sdp"
-                android:layout_marginEnd="@dimen/_50sdp"
-                android:background="@drawable/img_dashboard_button_bg"
-                android:fontFamily="@font/montserrat_semi_bold"
-                android:gravity="center"
-                android:padding="@dimen/_11ssp"
-                android:text="@string/lbl_drops"
-                android:textAllCaps="true"
-                android:textColor="@color/colorPrimaryText"
-                android:textSize="@dimen/_14ssp" />
+                <TextView
+                    android:id="@+id/txtPickUps"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_50sdp"
+                    android:layout_marginEnd="@dimen/_50sdp"
+                    android:layout_marginBottom="@dimen/_16sdp"
+                    android:background="@drawable/img_dashboard_button_bg"
+                    android:fontFamily="@font/montserrat_semi_bold"
+                    android:gravity="center"
+                    android:padding="@dimen/_11ssp"
+                    android:text="@string/lbl_pick_ups"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorPrimaryText"
+                    android:textSize="@dimen/_14ssp" />
 
-        </LinearLayout>
+                <TextView
+                    android:id="@+id/txtDrops"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_50sdp"
+                    android:layout_marginEnd="@dimen/_50sdp"
+                    android:background="@drawable/img_dashboard_button_bg"
+                    android:fontFamily="@font/montserrat_semi_bold"
+                    android:gravity="center"
+                    android:padding="@dimen/_11ssp"
+                    android:text="@string/lbl_drops"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorPrimaryText"
+                    android:textSize="@dimen/_14ssp" />
+
+            </LinearLayout>
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
     </LinearLayout>
 

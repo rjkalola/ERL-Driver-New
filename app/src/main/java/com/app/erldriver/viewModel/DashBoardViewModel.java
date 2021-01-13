@@ -32,8 +32,8 @@ public class DashBoardViewModel extends BaseViewModel {
         ERLApp.getServiceComponent().inject(this);
     }
 
-    public void getDashboardRequest() {
-        if (view != null) {
+    public void getDashboardRequest(boolean isProgress) {
+        if (view != null && isProgress) {
             view.showProgress();
         }
         new RXRetroManager<DashBoardResponse>() {

@@ -10,6 +10,7 @@ public class OrderDetailsResponse extends BaseResponse {
     private List<OrderItemInfo> info;
     private int total_price, total_paces, status;
     private String status_name, order_no, name, phone, email, address, street, landmark, area_name, city_name, latitude, longitude, pickup_date, pickup_time, delivery_note, delivery_time;
+    private boolean is_payment_received;
 
     public List<OrderItemInfo> getInfo() {
         return info;
@@ -169,6 +170,14 @@ public class OrderDetailsResponse extends BaseResponse {
 
     public void setDelivery_time(String delivery_time) {
         this.delivery_time = delivery_time;
+    }
+
+    public boolean isIs_payment_received() {
+        return is_payment_received;
+    }
+
+    public void setIs_payment_received(boolean is_payment_received) {
+        this.is_payment_received = is_payment_received;
     }
 }
 

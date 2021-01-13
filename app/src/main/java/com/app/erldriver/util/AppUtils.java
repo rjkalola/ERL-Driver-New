@@ -658,17 +658,16 @@ public final class AppUtils {
         Intent intent = null;
         Bundle bundle = new Bundle();
         bundle.putString(AppConstant.IntentKey.NOTIFICATION_TYPE, data.getType());
-        Log.e("test","5");
-        switch (data.getType()) {
-            case "5000":
-                Log.e("test","6");
-                intent = new Intent("com.app.erldriver.view.activity.ChatActivity");
-                break;
-            default:
-                Log.e("test","7");
-                intent = new Intent("com.app.erldriver.view.activity.DashboardActivity");
-        }
-
+//        switch (data.getType()) {
+//            case "5000":
+//                Log.e("test","6");
+//                intent = new Intent("com.app.erldriver.view.activity.ChatActivity");
+//                break;
+//            default:
+//                Log.e("test","7");
+//                intent = new Intent("com.app.erldriver.view.activity.DashboardActivity");
+//        }
+        intent = new Intent("com.app.erldriver.view.activity.DashboardActivity");
         if (intent != null) {
             intent.putExtras(bundle);
         }

@@ -161,7 +161,7 @@
     <string name="lbl_select_shop">Select Shop</string>
     <string name="lbl_no_pickup_order_found">No pickup order found</string>
     <string name="lbl_no_deliver_order_found">No deliver order found</string>
-
+    <string name="payment_received">Payment Received?</string>
 
     <!--    <string name=""></string>-->
 
