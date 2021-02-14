@@ -39,11 +39,11 @@ public interface ManageOrderInterface {
 
     @Multipart
     @POST("pickedup-order")
-    Observable<BaseResponse> pickedUpOrder(@Part("id") RequestBody id,@Part("pickup_note") RequestBody pickup_note);
+    Observable<BaseResponse> pickedUpOrder(@Part("id") RequestBody id,@Part("pickup_note") RequestBody pickup_note,@Part("payment_collected") RequestBody payment_collected);
 
     @Multipart
     @POST("delivered-order")
-    Observable<BaseResponse> deliveredOrder(@Part("id") RequestBody id,@Part("drop_note") RequestBody drop_note);
+    Observable<BaseResponse> deliveredOrder(@Part("id") RequestBody id,@Part("drop_note") RequestBody drop_note,@Part("payment_collected") RequestBody payment_collected);
 
 
 }

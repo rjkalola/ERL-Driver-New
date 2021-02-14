@@ -199,7 +199,7 @@
     <string name="lbl_5_hours">5\nHours</string>
     <string name="lbl_skip_item_lazy_order">Skip Item Lazy Order</string>
     <string name="lbl_services">Services</string>
-    <!--    <string name=""></string>-->
+    <string name="payment_collected">Payment Collected?</string>
 
 
     //Driver New

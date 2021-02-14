@@ -185,13 +185,13 @@ public class MyOrderDetailsActivity extends BaseActivity implements View.OnClick
     }
 
     @Override
-    public void onSubmitOrder(String note, int orderType) {
+    public void onSubmitOrder(String note, int orderType,int paymentCollected) {
         switch (orderType) {
             case AppConstant.Type.ORDER_PICKUPS:
-                manageOrderViewModel.pickedUpOrderRequest(orderId, note);
+                manageOrderViewModel.pickedUpOrderRequest(orderId, note,paymentCollected);
                 break;
             case AppConstant.Type.ORDER_DROPS:
-                manageOrderViewModel.deliveredOrderRequest(orderId, note);
+                manageOrderViewModel.deliveredOrderRequest(orderId, note,paymentCollected);
                 break;
         }
     }

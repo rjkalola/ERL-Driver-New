@@ -3,6 +3,7 @@ package com.app.erldriver.view.dialog;
 import android.app.Dialog;
 import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 
@@ -63,10 +64,15 @@ public class SubmitOrderDialog extends DialogFragment {
         ad.setView(view);
         dialog = ad.create();
 
-
         binding.txtSubmit.setOnClickListener(v -> {
-            if (listener != null)
-                listener.onSubmitOrder(binding.edtNote.getText().toString().trim(), orderType);
+            if (listener != null) {
+                int paymentCollected = 0;
+                if (binding.rgPC.getCheckedRadioButtonId() == R.id.rbYes)
+                    paymentCollected = 1;
+                else if (binding.rgPC.getCheckedRadioButtonId() == R.id.rbNo)
+                    paymentCollected = 2;
+                listener.onSubmitOrder(binding.edtNote.getText().toString().trim(), orderType, paymentCollected);
+            }
             dismiss();
         });
 

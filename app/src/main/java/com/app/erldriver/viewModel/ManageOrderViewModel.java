@@ -165,9 +165,10 @@ public class ManageOrderViewModel extends BaseViewModel {
         }.rxSingleCall(manageOrderInterface.clientOrderDetails(orderId));
     }
 
-    public void pickedUpOrderRequest(int id, String note) {
+    public void pickedUpOrderRequest(int id, String note,int paymentCollected) {
         RequestBody idBody = RequestBody.create(MediaType.parse("text/plain"), String.valueOf(id));
         RequestBody noteBody = RequestBody.create(MediaType.parse("text/plain"), note);
+        RequestBody paymentCollectedBody = RequestBody.create(MediaType.parse("text/plain"), String.valueOf(paymentCollected));
 
         if (view != null) {
             view.showProgress();
@@ -189,12 +190,13 @@ public class ManageOrderViewModel extends BaseViewModel {
                     view.hideProgress();
                 }
             }
-        }.rxSingleCall(manageOrderInterface.pickedUpOrder(idBody, noteBody));
+        }.rxSingleCall(manageOrderInterface.pickedUpOrder(idBody, noteBody,paymentCollectedBody));
     }
 
-    public void deliveredOrderRequest(int id, String note) {
+    public void deliveredOrderRequest(int id, String note,int paymentCollected) {
         RequestBody idBody = RequestBody.create(MediaType.parse("text/plain"), String.valueOf(id));
         RequestBody noteBody = RequestBody.create(MediaType.parse("text/plain"), note);
+        RequestBody paymentCollectedBody = RequestBody.create(MediaType.parse("text/plain"), String.valueOf(paymentCollected));
 
         if (view != null) {
             view.showProgress();
@@ -216,7 +218,7 @@ public class ManageOrderViewModel extends BaseViewModel {
                     view.hideProgress();
                 }
             }
-        }.rxSingleCall(manageOrderInterface.deliveredOrder(idBody,noteBody));
+        }.rxSingleCall(manageOrderInterface.deliveredOrder(idBody,noteBody,paymentCollectedBody));
     }
 
     public MutableLiveData<BaseResponse> mBaseResponse() {
