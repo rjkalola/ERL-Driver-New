@@ -55,10 +55,14 @@ public class SubmitOrderDialog extends DialogFragment {
             case AppConstant.Type.ORDER_PICKUPS:
                 binding.txtTitle.setText(getString(R.string.lbl_pick_up_note));
                 binding.edtNote.setHint(getString(R.string.hint_enter_pick_up_note));
+                binding.txtPaymentCollectedTitle.setVisibility(View.GONE);
+                binding.rgPC.setVisibility(View.GONE);
                 break;
             case AppConstant.Type.ORDER_DROPS:
                 binding.txtTitle.setText(getString(R.string.lbl_drop_note));
                 binding.edtNote.setHint(getString(R.string.hint_enter_drop_note));
+                binding.txtPaymentCollectedTitle.setVisibility(View.VISIBLE);
+                binding.rgPC.setVisibility(View.VISIBLE);
                 break;
         }
         ad.setView(view);

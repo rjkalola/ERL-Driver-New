@@ -81,7 +81,7 @@ public class DashBoardActivity extends BaseActivity implements View.OnClickListe
                 }
                 break;
             case R.id.txtDrops:
-                if (getDashBoardResponse() != null && getDashBoardResponse().getPickupCount() > 0) {
+                if (getDashBoardResponse() != null && getDashBoardResponse().getDropCount() > 0) {
                     bundle.putInt(AppConstant.IntentKey.ORDER_TYPE, AppConstant.Type.ORDER_DROPS);
                     moveActivityForResult(mContext, MyOrderListActivity.class, false, false, AppConstant.IntentKey.VIEW_ORDER, bundle);
                 } else {
