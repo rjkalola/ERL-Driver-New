@@ -7,7 +7,8 @@ public class VariantConfig {
 
     public static String getServerBaseUrl() {
         //live ip
-        return "http://erl.workpotency.com/api/v1/rider/";
+//        return "http://erl.workpotency.com/api/v1/rider/";
+        return "http://app.erl.ae/api/v1/rider/";
     }
 
     public static String getApkfilePath() {

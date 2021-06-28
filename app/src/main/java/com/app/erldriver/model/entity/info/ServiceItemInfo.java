@@ -5,14 +5,14 @@ import org.parceler.Parcel;
 
 @Parcel
 public class ServiceItemInfo {
-    int id, qty, price,wash_id;
-    String name, image;
+    int id, qty, wash_id;
+    String name, image, price;
 
     public ServiceItemInfo() {
 
     }
 
-    public ServiceItemInfo(int id, String name, int price, int quantity, String image) {
+    public ServiceItemInfo(int id, String name, String price, int quantity, String image) {
         this.id = id;
         this.qty = quantity;
         this.name = name;
@@ -20,7 +20,7 @@ public class ServiceItemInfo {
         this.image = image;
     }
 
-    public ServiceItemInfo(int id,int wash_id, int quantity) {
+    public ServiceItemInfo(int id, int wash_id, int quantity) {
         this.id = id;
         this.wash_id = wash_id;
         this.qty = quantity;
@@ -42,11 +42,11 @@ public class ServiceItemInfo {
         this.name = name;
     }
 
-    public int getPrice() {
+    public String getPrice() {
         return price;
     }
 
-    public void setPrice(int price) {
+    public void setPrice(String price) {
         this.price = price;
     }
 

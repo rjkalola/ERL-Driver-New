@@ -37,7 +37,7 @@ public class MyOrderServiceSubItemsListAdapter extends RecyclerView.Adapter<Recy
         final ItemViewHolder itemViewHolder = (ItemViewHolder) holder;
         ServiceItemInfo info = list.get(position);
         itemViewHolder.getData(info);
-        itemViewHolder.binding.txtPrice.setText(String.format(mContext.getString(R.string.lbl_display_price), String.valueOf(info.getPrice())));
+        itemViewHolder.binding.txtPrice.setText(String.format(mContext.getString(R.string.lbl_display_price), info.getPrice()));
         itemViewHolder.binding.txtQty.setText(String.valueOf(info.getQuantity()));
     }
 

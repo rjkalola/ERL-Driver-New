@@ -8,8 +8,8 @@ import java.util.List;
 
 public class OrderDetailsResponse extends BaseResponse {
     private List<OrderItemInfo> info;
-    private int total_price, total_paces, status;
-    private String status_name, order_no, name, phone, email, address, street, landmark, area_name, city_name, latitude, longitude, pickup_date, pickup_time, delivery_note, delivery_time;
+    private int total_paces, status;
+    private String status_name, order_no, name, phone, email, address, street, landmark, area_name, city_name, latitude, longitude, pickup_date, pickup_time, delivery_note, delivery_time,total_price;
     private boolean is_payment_received;
 
     public List<OrderItemInfo> getInfo() {
@@ -18,14 +18,6 @@ public class OrderDetailsResponse extends BaseResponse {
 
     public void setInfo(List<OrderItemInfo> info) {
         this.info = info;
-    }
-
-    public int getTotal_price() {
-        return total_price;
-    }
-
-    public void setTotal_price(int total_price) {
-        this.total_price = total_price;
     }
 
     public int getTotal_paces() {
@@ -170,6 +162,14 @@ public class OrderDetailsResponse extends BaseResponse {
 
     public void setDelivery_time(String delivery_time) {
         this.delivery_time = delivery_time;
+    }
+
+    public String getTotal_price() {
+        return total_price;
+    }
+
+    public void setTotal_price(String total_price) {
+        this.total_price = total_price;
     }
 
     public boolean isIs_payment_received() {
