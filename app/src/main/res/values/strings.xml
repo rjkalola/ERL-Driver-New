@@ -224,6 +224,7 @@
     <string name="hint_enter_drop_note">Enter Drop notes:</string>
     <string name="lbl_submit">Submit</string>
     <string name="lbl_track">Track</string>
+    <string name="error_empty_payment_collection">Please select payment collect option</string>
 
     <!--        <string name=""></string>-->
 

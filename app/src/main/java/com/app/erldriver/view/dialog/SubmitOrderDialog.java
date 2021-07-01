@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -17,6 +18,7 @@ import com.app.erldriver.R;
 import com.app.erldriver.callback.SubmitOrderListener;
 import com.app.erldriver.databinding.DialogSubmitOrderBinding;
 import com.app.erldriver.util.AppConstant;
+import com.app.utilities.utils.ToastHelper;
 
 
 public class SubmitOrderDialog extends DialogFragment {
@@ -24,16 +26,18 @@ public class SubmitOrderDialog extends DialogFragment {
     private static Context mContext;
     private static AlertDialog dialog;
     private static int orderType;
+    private static boolean is_payment_received;
     private static SubmitOrderListener listener;
 
     public SubmitOrderDialog() {
     }
 
-    public static SubmitOrderDialog newInstance(Context context, int type, SubmitOrderListener l) {
+    public static SubmitOrderDialog newInstance(Context context, int type, SubmitOrderListener l, boolean payment_received) {
         SubmitOrderDialog frag = new SubmitOrderDialog();
         mContext = context;
         orderType = type;
         listener = l;
+        is_payment_received = payment_received;
         return frag;
     }
 
@@ -59,10 +63,16 @@ public class SubmitOrderDialog extends DialogFragment {
                 binding.rgPC.setVisibility(View.GONE);
                 break;
             case AppConstant.Type.ORDER_DROPS:
-                binding.txtTitle.setText(getString(R.string.lbl_drop_note));
                 binding.edtNote.setHint(getString(R.string.hint_enter_drop_note));
-                binding.txtPaymentCollectedTitle.setVisibility(View.VISIBLE);
-                binding.rgPC.setVisibility(View.VISIBLE);
+                if (!is_payment_received) {
+                    binding.txtTitle.setText(getString(R.string.lbl_drop_note));
+                    binding.txtPaymentCollectedTitle.setVisibility(View.VISIBLE);
+                    binding.rgPC.setVisibility(View.VISIBLE);
+                } else {
+                    binding.txtTitle.setText(getString(R.string.lbl_pick_up_note));
+                    binding.txtPaymentCollectedTitle.setVisibility(View.GONE);
+                    binding.rgPC.setVisibility(View.GONE);
+                }
                 break;
         }
         ad.setView(view);
@@ -70,14 +80,33 @@ public class SubmitOrderDialog extends DialogFragment {
 
         binding.txtSubmit.setOnClickListener(v -> {
             if (listener != null) {
-                int paymentCollected = 0;
-                if (binding.rgPC.getCheckedRadioButtonId() == R.id.rbYes)
-                    paymentCollected = 1;
-                else if (binding.rgPC.getCheckedRadioButtonId() == R.id.rbNo)
-                    paymentCollected = 2;
-                listener.onSubmitOrder(binding.edtNote.getText().toString().trim(), orderType, paymentCollected);
+                switch (orderType) {
+                    case AppConstant.Type.ORDER_PICKUPS:
+                        listener.onSubmitOrder(binding.edtNote.getText().toString().trim(), orderType, 0);
+                        dismiss();
+                        break;
+                    case AppConstant.Type.ORDER_DROPS:
+                        if (!is_payment_received) {
+                            int paymentCollected = 0;
+                            if (binding.rgPC.getCheckedRadioButtonId() == R.id.rbYes)
+                                paymentCollected = 1;
+                            else if (binding.rgPC.getCheckedRadioButtonId() == R.id.rbNo)
+                                paymentCollected = 2;
+
+                            if (paymentCollected != 0) {
+                                listener.onSubmitOrder(binding.edtNote.getText().toString().trim(), orderType, paymentCollected);
+                                dismiss();
+                            } else {
+                                ToastHelper.normal(mContext, getString(R.string.error_empty_payment_collection), Toast.LENGTH_SHORT, false);
+                            }
+                        } else {
+                            listener.onSubmitOrder(binding.edtNote.getText().toString().trim(), orderType, 0);
+                            dismiss();
+                            break;
+                        }
+                }
             }
-            dismiss();
+
         });
 
         binding.txtCancel.setOnClickListener(v -> {

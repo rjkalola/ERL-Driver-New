@@ -179,19 +179,19 @@ public class MyOrderDetailsActivity extends BaseActivity implements View.OnClick
 
     public void submitOrderDialog() {
         FragmentManager fm = ((BaseActivity) mContext).getSupportFragmentManager();
-        SubmitOrderDialog submitOrderDialog = SubmitOrderDialog.newInstance(mContext, orderType, this);
+        SubmitOrderDialog submitOrderDialog = SubmitOrderDialog.newInstance(mContext, orderType, this, getOrderDetails().isIs_payment_received());
         submitOrderDialog.setCancelable(false);
         submitOrderDialog.show(fm, "submitOrderDialog");
     }
 
     @Override
-    public void onSubmitOrder(String note, int orderType,int paymentCollected) {
+    public void onSubmitOrder(String note, int orderType, int paymentCollected) {
         switch (orderType) {
             case AppConstant.Type.ORDER_PICKUPS:
-                manageOrderViewModel.pickedUpOrderRequest(orderId, note,paymentCollected);
+                manageOrderViewModel.pickedUpOrderRequest(orderId, note, paymentCollected);
                 break;
             case AppConstant.Type.ORDER_DROPS:
-                manageOrderViewModel.deliveredOrderRequest(orderId, note,paymentCollected);
+                manageOrderViewModel.deliveredOrderRequest(orderId, note, paymentCollected);
                 break;
         }
     }
